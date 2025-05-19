@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERN Global - Elevate Your Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body class="font-poppins text-gray-800 bg-gray-50">
+    <!-- Header with Logo -->
+  <header class="fixed top-0 w-full bg-white shadow-lg z-50">
+       <div class="container mx-auto flex justify-between items-center py-4 px-6">
+          <div class="flex items-center">
+               
+                <div class="text-2xl font-bold text-purple-700">ERN Global</div>
+            </div>
+ <nav style="display: flex; gap: 20px; background-color: #f9f9f9; padding: 10px;">
+    <a href="#home" style="text-decoration: none; color: #333;">Home</a>
+    <a href="#destinations" style="text-decoration: none; color: #333;">Destinations</a>
+
+    <div style="position: relative; display: inline-block;">
+      <a href="#" style="text-decoration: none; color: #333;">Services ▼</a>
+      <div style="display: none; position: absolute; background-color: white; min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1;" id="servicesDropdown">
+        <a href="admissionprocessing.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Admission Processing</a>
+        <a href="visaguide.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Visa Guiding</a>
+        <a href="counselling.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Counselling</a>
+      </div>
+    </div>
+
+    <a href="#blogs" style="text-decoration: none; color: #333;">Blogs</a>
+    <a href="#contact" style="text-decoration: none; color: #333;">Contact</a>
+  </nav>
+
+  <script>
+    const dropdown = document.getElementById("servicesDropdown");
+    const parent = dropdown.parentElement;
+
+    parent.addEventListener("mouseenter", () => {
+      dropdown.style.display = "block";
+    });
+
+    parent.addEventListener("mouseleave", () => {
+      dropdown.style.display = "none";
+    });
+  </script>
+ 
+
+
+        <button class="md:hidden text-purple-700 text-2xl" id="menu-toggle">☰</button>
+    </div>
+ 
+   
+</header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-16 w-full bg-white shadow-lg z-40">
+        <nav class="flex flex-col items-center py-4">
+            <a href="#home" class="py-2 text-gray-600 hover:text-purple-600">Home</a>
+            <a href="#destinations" class="py-2 text-gray-600 hover:text-purple-600">Destinations</a>
+            <a href="#services" class="py-2 text-gray-600 hover:text-purple-600">Services</a>
+            <a href="#services" class="py-2 text-gray-600 hover:text-purple-600">Blogs</a>
+            <a href="#contact" class="py-2 text-gray-600 hover:text-purple-600">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section with Background Image -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-600 to-purple-900 text-white bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+        <div class="container mx-auto px-6 text-center bg-purple-900 bg-opacity-60 py-12 rounded-xl">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Elevate Your Future</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Unlock global education opportunities with ERN Global—your trusted partner in studying abroad.</p>
+            <a href="#contact" class="bg-white text-purple-700 px-8 py-4 rounded-full font-semibold hover:bg-purple-100 transition transform hover:scale-105">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Destinations Section with Flags -->
+    <section id="destinations" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-purple-700 mb-12">Explore Your Dream Destinations</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag" class="h-12 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold text-purple-600 mb-2">Canada</h3>
+                    <p class="text-gray-600">Top-tier universities and vibrant student life.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="h-12 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold text-purple-600 mb-2">UK</h3>
+                    <p class="text-gray-600">World-class education with no tuition fees.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="https://flagcdn.com/w80/ae.png" alt="UAE Flag" class="h-12 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold text-purple-600 mb-2">UAE</h3>
+                    <p class="text-gray-600">Modern campuses in a global hub.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="https://flagcdn.com/w80/us.png" alt="USA Flag" class="h-12 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold text-purple-600 mb-2">USA</h3>
+                    <p class="text-gray-600">Rich culture meets affordable education.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Icons -->
+    <section id="services" class="py-20 bg-purple-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-purple-700 mb-12">Our Premium Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <img src="https://img.icons8.com/ios-filled/50/6B46C1/graduation-cap.png" alt="Admission Icon" class="h-12 mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold text-purple-600 mb-4">Admission Processing</h3>
+                    <p class="text-gray-600">Seamless applications to top universities worldwide.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <img src="https://img.icons8.com/ios-filled/50/6B46C1/passport.png" alt="Visa Icon" class="h-12 mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold text-purple-600 mb-4">Visa Guidance</h3>
+                    <p class="text-gray-600">Expert support for a hassle-free visa process.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <img src="https://img.icons8.com/ios-filled/50/6B46C1/chat.png" alt="Counseling Icon" class="h-12 mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold text-purple-600 mb-4">Counseling</h3>
+                    <p class="text-gray-600">Personalized advice to shape your academic journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section with Images -->
+    <section id="testimonials" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-purple-700 mb-12">What Our Students Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Student 1" class="h-16 w-16 rounded-full mx-auto mb-4">
+                    <p class="text-gray-600 italic mb-4">"ERN Global made my dream of studying in Canada a reality!"</p>
+                    <p class="text-purple-600 font-semibold">Sarah M.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Student 2" class="h-16 w-16 rounded-full mx-auto mb-4">
+                    <p class="text-gray-600 italic mb-4">"The visa process was smooth thanks to their expert guidance."</p>
+                    <p class="text-purple-600 font-semibold">Ahmed K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Image -->
+    <section id="contact" class="py-20 bg-purple-700 text-white text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+        <div class="container mx-auto px-6 bg-purple-900 bg-opacity-60 py-12 rounded-xl">
+            <h2 class="text-4xl font-bold mb-6">Ready to Begin?</h2>
+            <p class="text-lg mb-8 max-w-xl mx-auto">Contact us today to start your journey toward global education excellence.</p>
+            <a href="mailto:info@ernglobal.org" class="bg-white text-purple-700 px-8 py-4 rounded-full font-semibold hover:bg-purple-100 transition transform hover:scale-105">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 ERN Global. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
