@@ -39,7 +39,30 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+document.addEventListener('DOMContentLoaded', function() {
+    // --- about Dropdown Logic ---
+    const aboutButton = document.getElementById('aboutButton');
+    const aboutDropdown = document.getElementById('aboutDropdown');
 
+    if (aboutButton && aboutDropdown) {
+        aboutButton.addEventListener('click', function(event) {
+            // Prevent the document click listener (if active) from immediately closing the dropdown
+            event.stopPropagation();
+
+            // Toggle the visibility and opacity classes
+            aboutDropdown.classList.toggle('opacity-0');
+            aboutDropdown.classList.toggle('invisible');
+        });
+
+        // Optional: Close the dropdown if clicked outside of it
+        document.addEventListener('click', function(event) {
+            // Check if the dropdown is currently visible and the click was outside
+            const isDropdownVisible = !aboutDropdown.classList.contains('invisible');
+            if (isDropdownVisible && !aboutButton.contains(event.target) && !aboutDropdown.contains(event.target)) {
+                aboutDropdown.classList.add('opacity-0', 'invisible');
+            }
+        });
+    }
     // --- Mobile Menu Toggle Logic ---
     const menuToggleButton = document.getElementById('menu-toggle'); // Corrected variable name for clarity
     const mobileMenu = document.getElementById('mobile-menu');
