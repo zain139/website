@@ -1,35 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | ERN Global</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
 </head>
-<body>
-    <!-- Include your existing navigation here -->
+<body class="bg-gray-50 text-gray-800">
 
-    <section class="contact-form">
-        <div class="form-container">
-            <h2>Contact Us</h2>
-            <form action="submit_form.php" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
+  <!-- Contact Header -->
+  <header class="bg-white shadow-md py-6">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold text-purple-700">Contact Us</h1>
+      <p class="text-gray-600 mt-2">We’re here to help you with your study abroad journey!</p>
+    </div>
+  </header>
+
+  <!-- Contact Form Section -->
+  <section class="container mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Form -->
+      <div class="bg-white p-8 shadow-lg rounded-xl">
+        <h2 class="text-2xl font-semibold text-purple-700 mb-6">Get in Touch</h2>
+        <form action="#" method="POST" class="space-y-5">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="email" name="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"></textarea>
+          </div>
+          <button type="submit" class="bg-purple-700 text-white px-6 py-2 rounded hover:bg-purple-800">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Info Panel -->
+      <div class="flex flex-col justify-center">
+        <h3 class="text-xl font-semibold text-purple-700 mb-4">Our Offices</h3>
+        <ul class="text-gray-700 space-y-3">
+          <li><strong>ERN Pakistan:</strong> Lahore, Pakistan</li>
+          <li><strong>ERN Dubai:</strong> Dubai, UAE</li>
+          <li><strong>ERN Bahrain:</strong> Manama, Bahrain</li>
+        </ul>
+        <div class="mt-8">
+          <h4 class="text-lg font-medium text-purple-700">Email</h4>
+          <p>info@ernglobal.com</p>
         </div>
-    </section>
+        <div class="mt-4">
+          <h4 class="text-lg font-medium text-purple-700">Phone</h4>
+          <p>+92 300 1234567</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Include your existing footer here -->
 </body>
 </html>
