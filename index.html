@@ -115,6 +115,26 @@
   });
 </script>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-16 w-full bg-white shadow-lg z-40">
+        <nav class="flex flex-col items-center py-4">
+            <a href="#home" class="py-2 text-gray-600 hover:text-purple-600">Home</a>
+            <a href="#destinations" class="py-2 text-gray-600 hover:text-purple-600">Destinations</a>
+            <a href="#services" class="py-2 text-gray-600 hover:text-purple-600">Services</a>
+            <a href="#services" class="py-2 text-gray-600 hover:text-purple-600">Blogs</a>
+            <a href="#contact" class="py-2 text-gray-600 hover:text-purple-600">Contact</a>
+        </nav>
+    </div>
+      
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
  </body>
    
 </header>
