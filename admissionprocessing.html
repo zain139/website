@@ -7,17 +7,58 @@
   <title>Admission Processing | ERN Global</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800">
-  <!-- Navigation Bar -->
-  <nav class="bg-purple-700 text-white p-4 flex justify-between">
-    <div class="text-xl font-bold">ERN Global</div>
-    <div class="space-x-4">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="admissionprocessing.html" class="hover:underline">Admission</a>
-      <a href="visaguide.html" class="hover:underline">Visa</a>
-      <a href="counselling.html" class="hover:underline">Counselling</a>
+<body class="bg-white text-gray-800 overflow-y-auto">
+  <header class="fixed top-0 w-full bg-white shadow-lg z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="flex items-center">
+        <div class="text-2xl font-bold text-purple-700">ERN Global</div>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="index.html" class="hover:bg-purple-800 px-3 py-2 rounded-md">Home</a>
+        <a href="#destinations" class="hover:bg-purple-800 px-3 py-2 rounded-md">Destinations</a>
+
+        <!-- Services Dropdown -->
+        <div class="relative" id="servicesDropdownWrapper">
+          <button id="servicesButton" class="hover:bg-purple-800 px-3 py-2 rounded-md">Services</button>
+          <div id="servicesDropdown" class="absolute hidden flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[200px] z-100">
+            <ul class="flex flex-col w-full">
+              <li><a href="admissionprocessing.html" class="px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Admission Processing</a></li>
+              <li><a href="visaguide.html" class="px-4 py-2 hover:bg-gray-100">Visa Guiding</a></li>
+              <li><a href="counselling.html" class="px-4 py-2 hover:bg-gray-100">Counselling</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#blogs" class="hover:bg-purple-800 px-3 py-2 rounded-md">Blogs</a>
+
+        <!-- About Dropdown -->
+        <div class="relative" id="aboutDropdownWrapper">
+          <button id="aboutButton" class="hover:bg-purple-800 px-3 py-2 rounded-md text-gray-800">About</button>
+          <div id="aboutDropdown" class="absolute hidden flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[180px] z-50">
+            <a href="ceo.html" class="px-4 py-2 hover:bg-gray-100 text-left w-full">Our CEO</a>
+            <div class="relative" id="ernTeamWrapper">
+              <button class="px-4 py-2 hover:bg-gray-100 text-left w-full">ERN Team</button>
+              <div id="ernTeamDropdown" class="absolute left-full top-0 hidden flex-col bg-white text-black rounded shadow-lg min-w-[180px] z-100">
+                <ul class="flex flex-col w-full">
+                  <li><a href="ernpakistan.html" class="px-4 py-2 hover:bg-gray-100">ERN Pakistan</a></li>
+                  <li><a href="erndubai.html" class="px-4 py-2 hover:bg-gray-100">ERN Dubai</a></li>
+                  <li><a href="ernbahrain.html" class="px-4 py-2 hover:bg-gray-100">ERN Bahrain</a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="universities.html" class="px-4 py-2 hover:bg-gray-100">Universities</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="hover:bg-purple-800 px-3 py-2 rounded-md">Contact</a>
+        <a href="consultation.html" class="bg-white text-purple-700 hover:bg-purple-100 px-4 py-2 rounded font-semibold">Free Consultation</a>
+      </nav>
+
+      <button class="md:hidden text-purple-700 text-2xl" id="menu-toggle">☰</button>
     </div>
-  </nav>
+  </header>
 
   <!-- Hero Section -->
   <section class="bg-cover bg-center h-64 text-white flex items-center justify-center" style="background-image: url('admissionbg.png');">
