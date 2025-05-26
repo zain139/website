@@ -115,25 +115,66 @@
   });
 </script>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed top-16 w-full bg-white shadow-lg z-40">
-        <nav class="flex flex-col items-center py-4">
-            <a href="#home" class="py-2 text-gray-600 hover:text-purple-600">Home</a>
-            <a href="#destinations" class="py-2 text-gray-600 hover:text-purple-600">Destinations</a>
-            <a href="#services" class="py-2 text-gray-600 hover:text-purple-600">Services</a>
-            <a href="#services" class="py-2 text-gray-600 hover:text-purple-600">Blogs</a>
-            <a href="#contact" class="py-2 text-gray-600 hover:text-purple-600">Contact</a>
-        </nav>
+ <!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed top-16 w-full bg-white shadow-lg z-40 md:hidden">
+  <nav class="flex flex-col py-4 px-6 space-y-2 text-gray-700">
+
+    <a href="index.html" class="hover:bg-purple-100 px-4 py-2 rounded">Home</a>
+    <a href="#destinations" class="hover:bg-purple-100 px-4 py-2 rounded">Destinations</a>
+
+    <!-- Services dropdown -->
+    <div class="relative">
+      <button id="mobile-services-btn" class="w-full text-left px-4 py-2 rounded hover:bg-purple-100">Services ▾</button>
+      <div id="mobile-services-dropdown" class="hidden flex-col mt-1 ml-4">
+        <a href="admissionprocessing.html" class="px-4 py-2 hover:bg-purple-50 rounded">Admission Processing</a>
+        <a href="visaguide.html" class="px-4 py-2 hover:bg-purple-50 rounded">Visa Guiding</a>
+        <a href="counselling.html" class="px-4 py-2 hover:bg-purple-50 rounded">Counselling</a>
+      </div>
     </div>
+
+    <!-- About dropdown -->
+    <div class="relative">
+      <button id="mobile-about-btn" class="w-full text-left px-4 py-2 rounded hover:bg-purple-100">About ▾</button>
+      <div id="mobile-about-dropdown" class="hidden flex-col mt-1 ml-4">
+        <a href="ceo.html" class="px-4 py-2 hover:bg-purple-50 rounded">Our CEO</a>
+        <a href="ernpakistan.html" class="px-4 py-2 hover:bg-purple-50 rounded">ERN Pakistan</a>
+        <a href="erndubai.html" class="px-4 py-2 hover:bg-purple-50 rounded">ERN Dubai</a>
+        <a href="ernbahrain.html" class="px-4 py-2 hover:bg-purple-50 rounded">ERN Bahrain</a>
+        <a href="universities.html" class="px-4 py-2 hover:bg-purple-50 rounded">Universities</a>
+      </div>
+    </div>
+
+    <a href="#blogs" class="hover:bg-purple-100 px-4 py-2 rounded">Blogs</a>
+    <a href="contact.html" class="hover:bg-purple-100 px-4 py-2 rounded">Contact</a>
+    <a href="consultation.html" class="bg-purple-100 text-purple-700 px-4 py-2 rounded font-semibold">Free Consultation</a>
+  </nav>
+</div>
+
       
 <script>
   const toggleButton = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
+  const mobileServicesBtn = document.getElementById('mobile-services-btn');
+  const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+  const mobileAboutBtn = document.getElementById('mobile-about-btn');
+  const mobileAboutDropdown = document.getElementById('mobile-about-dropdown');
 
+  // Toggle mobile menu
   toggleButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
   });
+
+  // Toggle Services dropdown
+  mobileServicesBtn.addEventListener('click', () => {
+    mobileServicesDropdown.classList.toggle('hidden');
+  });
+
+  // Toggle About dropdown
+  mobileAboutBtn.addEventListener('click', () => {
+    mobileAboutDropdown.classList.toggle('hidden');
+  });
 </script>
+
 
  </body>
    
