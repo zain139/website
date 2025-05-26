@@ -60,7 +60,7 @@
   </header>
 
   <!-- Main content with padding top to offset fixed header -->
- <main class="pt-16 overflow-y-auto">
+  <main class="pt-16 overflow-y-auto">
     <section class="bg-cover bg-center h-64 text-white flex items-center justify-center" style="background-image: url('counsellingbg.png');">
       <div class="text-center">
         <h1 class="text-4xl font-bold">Counselling</h1>
@@ -99,7 +99,7 @@
   </main>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden absolute top-16 w-full bg-white shadow-lg z-40 md:hidden overflow-y-auto max-h-[calc(100vh-64px)]">
+  <div id="mobile-menu" class="hidden absolute top-16 w-full bg-white shadow-lg z-[60] md:hidden overflow-y-auto max-h-[calc(100vh-64px)]">
     <nav class="flex flex-col py-4 px-6 space-y-2 text-gray-700">
       <a href="index.html" class="hover:bg-purple-100 px-4 py-2 rounded">Home</a>
       <a href="#destinations" class="hover:bg-purple-100 px-4 py-2 rounded">Destinations</a>
@@ -165,6 +165,7 @@
 
     toggleButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+      toggleButton.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
     });
 
     mobileServicesBtn.addEventListener('click', () => {
