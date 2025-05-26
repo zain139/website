@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Counselling | ERN Global</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-800 overflow-y-auto">
   <header class="fixed top-0 w-full bg-white shadow-lg z-50">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
       <div class="flex items-center">
@@ -21,8 +21,6 @@
         <!-- Services Dropdown -->
         <div class="relative" id="servicesDropdownWrapper">
           <button id="servicesButton" class="hover:bg-purple-800 px-3 py-2 rounded-md">Services</button>
-
-          <!-- Dropdown Menu -->
           <div id="servicesDropdown" class="absolute hidden flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[200px] z-100">
             <ul class="flex flex-col w-full">
               <li><a href="admissionprocessing.html" class="px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Admission Processing</a></li>
@@ -37,15 +35,10 @@
         <!-- About Dropdown -->
         <div class="relative" id="aboutDropdownWrapper">
           <button id="aboutButton" class="hover:bg-purple-800 px-3 py-2 rounded-md text-gray-800">About</button>
-
-          <!-- Dropdown -->
           <div id="aboutDropdown" class="absolute hidden flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[180px] z-50">
             <a href="ceo.html" class="px-4 py-2 hover:bg-gray-100 text-left w-full">Our CEO</a>
-
             <div class="relative" id="ernTeamWrapper">
               <button class="px-4 py-2 hover:bg-gray-100 text-left w-full">ERN Team</button>
-
-              <!-- Submenu -->
               <div id="ernTeamDropdown" class="absolute left-full top-0 hidden flex-col bg-white text-black rounded shadow-lg min-w-[180px] z-100">
                 <ul class="flex flex-col w-full">
                   <li><a href="ernpakistan.html" class="px-4 py-2 hover:bg-gray-100">ERN Pakistan</a></li>
@@ -54,7 +47,6 @@
                 </ul>
               </div>
             </div>
-
             <a href="universities.html" class="px-4 py-2 hover:bg-gray-100">Universities</a>
           </div>
         </div>
@@ -65,12 +57,10 @@
 
       <button class="md:hidden text-purple-700 text-2xl" id="menu-toggle">☰</button>
     </div>
-
   </header>
 
   <!-- Main content with padding top to offset fixed header -->
-  <main class="pt-16">
-
+  <main class="pt-16 overflow-y-auto">
     <section class="bg-cover bg-center h-64 text-white flex items-center justify-center" style="background-image: url('counsellingbg.png');">
       <div class="text-center">
         <h1 class="text-4xl font-bold">Counselling</h1>
@@ -106,16 +96,13 @@
       <p class="mb-4">Connect with ERN Global counsellors to achieve your dreams.</p>
       <a href="contact.html" class="bg-white text-purple-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">Book a Free Consultation</a>
     </section>
-
   </main>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden absolute top-16 w-full bg-white shadow-lg z-40 md:hidden overflow-y-auto max-h-screen">
+  <div id="mobile-menu" class="hidden absolute top-16 w-full bg-white shadow-lg z-40 md:hidden overflow-y-auto max-h-[calc(100vh-64px)]">
     <nav class="flex flex-col py-4 px-6 space-y-2 text-gray-700">
       <a href="index.html" class="hover:bg-purple-100 px-4 py-2 rounded">Home</a>
       <a href="#destinations" class="hover:bg-purple-100 px-4 py-2 rounded">Destinations</a>
-
-      <!-- Services dropdown -->
       <div class="relative">
         <button id="mobile-services-btn" class="w-full text-left px-4 py-2 hover:bg-purple-100">Services ▾</button>
         <ul id="mobile-services-dropdown" class="hidden flex-col mt-1 ml-4 pl-4 space-y-1 border-l border-purple-200">
@@ -124,8 +111,6 @@
           <li><a href="counselling.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Counselling</a></li>
         </ul>
       </div>
-
-      <!-- About dropdown -->
       <div class="relative">
         <button id="mobile-about-btn" class="w-full text-left px-4 py-2 hover:bg-purple-100">About ▾</button>
         <ul id="mobile-about-dropdown" class="hidden flex-col mt-1 ml-4 pl-4 space-y-1 border-l border-purple-200">
@@ -136,7 +121,6 @@
           <li><a href="universities.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Universities</a></li>
         </ul>
       </div>
-
       <a href="#blogs" class="hover:bg-purple-100 px-4 py-2 rounded">Blogs</a>
       <a href="contact.html" class="hover:bg-purple-100 px-4 py-2 rounded">Contact</a>
       <a href="consultation.html" class="bg-purple-100 text-purple-700 px-4 py-2 rounded font-semibold">Free Consultation</a>
