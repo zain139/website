@@ -98,5 +98,82 @@
     <p class="mb-4">Let ERN Global help you unlock global opportunities.</p>
     <a href="contact.html" class="bg-white text-purple-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">Book a Free Consultation</a>
   </section>
+    <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden absolute top-16 w-full bg-white shadow-lg z-40 md:hidden overflow-y-auto max-h-[calc(100vh-64px)]">
+    <nav class="flex flex-col py-4 px-6 space-y-2 text-gray-700">
+      <a href="index.html" class="hover:bg-purple-100 px-4 py-2 rounded">Home</a>
+      <a href="#destinations" class="hover:bg-purple-100 px-4 py-2 rounded">Destinations</a>
+      <div class="relative">
+        <button id="mobile-services-btn" class="w-full text-left px-4 py-2 hover:bg-purple-100">Services ▾</button>
+        <ul id="mobile-services-dropdown" class="hidden flex-col mt-1 ml-4 pl-4 space-y-1 border-l border-purple-200">
+          <li><a href="admissionprocessing.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Admission Processing</a></li>
+          <li><a href="visaguide.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Visa Guiding</a></li>
+          <li><a href="counselling.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Counselling</a></li>
+        </ul>
+      </div>
+      <div class="relative">
+        <button id="mobile-about-btn" class="w-full text-left px-4 py-2 hover:bg-purple-100">About ▾</button>
+        <ul id="mobile-about-dropdown" class="hidden flex-col mt-1 ml-4 pl-4 space-y-1 border-l border-purple-200">
+          <li><a href="ceo.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Our CEO</a></li>
+          <li><a href="ernpakistan.html" class="block px-4 py-2 hover:bg-purple-50 rounded">ERN Pakistan</a></li>
+          <li><a href="erndubai.html" class="block px-4 py-2 hover:bg-purple-50 rounded">ERN Dubai</a></li>
+          <li><a href="ernbahrain.html" class="block px-4 py-2 hover:bg-purple-50 rounded">ERN Bahrain</a></li>
+          <li><a href="universities.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Universities</a></li>
+        </ul>
+      </div>
+      <a href="#blogs" class="hover:bg-purple-100 px-4 py-2 rounded">Blogs</a>
+      <a href="contact.html" class="hover:bg-purple-100 px-4 py-2 rounded">Contact</a>
+      <a href="consultation.html" class="bg-purple-100 text-purple-700 px-4 py-2 rounded font-semibold">Free Consultation</a>
+    </nav>
+  </div>
+
+  <script>
+    // Desktop dropdown toggles
+    const servicesWrapper = document.getElementById("servicesDropdownWrapper");
+    const servicesDropdown = document.getElementById("servicesDropdown");
+    servicesWrapper.addEventListener("mouseenter", () => {
+      servicesDropdown.classList.remove("hidden");
+    });
+    servicesWrapper.addEventListener("mouseleave", () => {
+      servicesDropdown.classList.add("hidden");
+    });
+
+    const aboutWrapper = document.getElementById("aboutDropdownWrapper");
+    const aboutDropdown = document.getElementById("aboutDropdown");
+    const ernTeamWrapper = document.getElementById("ernTeamWrapper");
+    const ernTeamDropdown = document.getElementById("ernTeamDropdown");
+    aboutWrapper.addEventListener("mouseenter", () => {
+      aboutDropdown.classList.remove("hidden");
+    });
+    aboutWrapper.addEventListener("mouseleave", () => {
+      aboutDropdown.classList.add("hidden");
+    });
+    ernTeamWrapper.addEventListener("mouseenter", () => {
+      ernTeamDropdown.classList.remove("hidden");
+    });
+    ernTeamWrapper.addEventListener("mouseleave", () => {
+      ernTeamDropdown.classList.add("hidden");
+    });
+
+    // Mobile menu toggles
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileServicesBtn = document.getElementById('mobile-services-btn');
+    const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+    const mobileAboutBtn = document.getElementById('mobile-about-btn');
+    const mobileAboutDropdown = document.getElementById('mobile-about-dropdown');
+
+    toggleButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileServicesBtn.addEventListener('click', () => {
+      mobileServicesDropdown.classList.toggle('hidden');
+    });
+
+    mobileAboutBtn.addEventListener('click', () => {
+      mobileAboutDropdown.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
