@@ -2,55 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Visa Guiding | ERN Global</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800">
-  <nav class="bg-purple-700 text-white p-4 flex justify-between">
-    <div class="text-xl font-bold">ERN Global</div>
-    <div class="space-x-4">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="admissionprocessing.html" class="hover:underline">Admission</a>
-      <a href="visaguide.html" class="hover:underline">Visa</a>
-      <a href="counselling.html" class="hover:underline">Counselling</a>
-    </div>
-  </nav>
-
-  <section class="bg-cover bg-center h-64 text-white flex items-center justify-center" style="background-image: url('visaguide.png');">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold">Visa Guiding</h1>
-      <p class="text-lg">Expert support for hassle-free visa approvals</p>
-    </div>
-  </section>
-
-  <section class="max-w-5xl mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">What We Offer</h2>
-    <p class="mb-6">Our Visa Guiding service simplifies the complex visa application process, helping you prepare all necessary documents and understand embassy requirements to maximize your approval chances.</p>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-100 p-4 rounded-lg shadow">
-        <img src="documentation.jpg" alt="Document Preparation" class="rounded mb-3" />
-        <h3 class="text-lg font-semibold">Document Preparation</h3>
-        <p>We assist in gathering and organizing all required documents for your visa application.</p>
+<body class="bg-white text-gray-800 overflow-y-auto">
+  <header class="fixed top-0 w-full bg-white shadow-lg z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="flex items-center">
+        <div class="text-2xl font-bold text-purple-700">ERN Global</div>
       </div>
-      <div class="bg-gray-100 p-4 rounded-lg shadow">
-        <img src="interview.jpg" alt="Interview Coaching" class="rounded mb-3" />
-        <h3 class="text-lg font-semibold">Interview Coaching</h3>
-        <p>Prepare with expert tips and mock interviews to boost your confidence for embassy interviews.</p>
-      </div>
-      <div class="bg-gray-100 p-4 rounded-lg shadow">
-        <img src="tracking.jpg" alt="Application Tracking" class="rounded mb-3" />
-        <h3 class="text-lg font-semibold">Application Tracking</h3>
-        <p>Stay updated with real-time tracking of your visa application status and deadlines.</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="bg-purple-700 text-white text-center p-8">
-    <h2 class="text-2xl font-bold mb-2">Ready to Get Your Visa?</h2>
-    <p class="mb-4">Let ERN Global guide you through the process effortlessly.</p>
-    <a href="contact.html" class="bg-white text-purple-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">Book a Free Consultation</a>
-  </section>
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="index.html" class="hover:bg-purple-800 px-3 py-2 rounded-md">Home</a>
+        <a href="#destinations" class="hover:bg-purple-800 px-3 py-2 rounded-md">Destinations</a>
+
+        <!-- Services Dropdown -->
+        <div class="relative" id="servicesDropdownWrapper">
+          <button id="servicesButton" class="hover:bg-purple-800 px-3 py-2 rounded-md">Services</button>
+          <div id="servicesDropdown" class="absolute hidden flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[200px] z-100">
+            <ul class="flex flex-col w-full">
+              <li><a href="admissionprocessing.html" class="px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Admission Processing</a></li>
+              <li><a href="visaguide.html" class="px-4 py-2 hover:bg-gray-100">Visa Guiding</a></li>
+              <li><a href="counselling.html" class="px-4 py-2 hover:bg-gray-100">Counselling</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#blogs" class="hover:bg-purple-800 px-3 py-2 rounded-md">Blogs</a>
+
+        <!-- About Dropdown -->
+        <div class="relative" id="aboutDropdownWrapper">
+          <button id="aboutButton" class="hover:bg-purple-800 px-3 py-2 rounded-md text-gray-800">About</button>
+          <div id="aboutDropdown" class="absolute hidden flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[180px] z-50">
+            <a href="ceo.html" class="px-4 py-2 hover:bg-gray-100 text-left w-full">Our CEO</a>
+            <div class="relative" id="ernTeamWrapper">
+              <button class="px-4 py-2 hover:bg-gray-100 text-left w-full">ERN Team</button>
+              <div id="ernTeamDropdown" class="absolute left-full top-0 hidden flex-col bg-white text-black rounded shadow-lg min-w-[180px] z-100">
+                <ul class="flex flex-col w-full">
+                  <li><a href="ernpakistan.html" class="px-4 py-2 hover:bg-gray-100">ERN Pakistan</a></li>
+                  <li><a href="erndubai.html" class="px-4 py-2 hover:bg-gray-100">ERN Dubai</a></li>
+                  <li><a href="ernbahrain.html" class="px-4 py-2 hover:bg-gray-100">ERN Bahrain</a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="universities.html" class="px-4 py-2 hover:bg-gray-100">Universities</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="hover:bg-purple-800 px-3 py-2 rounded-md">Contact</a>
+        <a href="consultation.html" class="bg-white text-purple-700 hover:bg-purple-100 px-4 py-2 rounded font-semibold">Free Consultation</a>
+      </nav>
+
+      <button class="md:hidden text-purple-700 text-2xl" id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="pt-16 overflow-y-auto">
+    <section class="bg-cover bg-center h-64 text-white flex items-center justify-center" style="background-image: url('visaguide.png');">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold">Visa Guiding</h1>
+        <p class="text-lg">Expert support for hassle-free visa approvals</p>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto p-6">
+      <h2 class="text-2xl font-bold mb-4">What We Offer</h2>
+      <p class="mb-6">Our Visa Guiding service simplifies the complex visa application process, helping you prepare all necessary documents and understand embassy requirements to maximize your approval chances.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+          <img src="documentation.jpg" alt="Document Preparation" class="w-full max-w-full h-auto rounded mb-3" />
+          <h3 class="text-lg font-semibold">Document Preparation</h3>
+          <p>We assist in gathering and organizing all required documents for your visa application.</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+          <img src="interview.jpg" alt="Interview Coaching" class="w-full max-w-full h-auto rounded mb-3" />
+          <h3 class="text-lg font-semibold">Interview Coaching</h3>
+          <p>Prepare with expert tips and mock interviews to boost your confidence for embassy interviews.</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+          <img src="tracking.jpg" alt="Application Tracking" class="w-full max-w-full h-auto rounded mb-3" />
+          <h3 class="text-lg font-semibold">Application Tracking</h3>
+          <p>Stay updated with real-time tracking of your visa application status and deadlines.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-purple-700 text-white text-center p-8">
+      <h2 class="text-2xl font-bold mb-2">Ready to Get Your Visa?</h2>
+      <p class="mb-4">Let ERN Global guide you through the process effortlessly.</p>
+      <a href="contact.html" class="bg-white text-purple-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">Book a Free Consultation</a>
+    </section>
+  </main>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden absolute top-16 w-full bg-white shadow-lg z-[60] md:hidden overflow-y-auto max-h-[calc(100vh-64px)]">
+    <nav class="flex flex-col py-4 px-6 space-y-2 text-gray-700">
+      <a href="index.html" class="hover:bg-purple-100 px-4 py-2 rounded">Home</a>
+      <a href="#destinations" class="hover:bg-purple-100 px-4 py-2 rounded">Destinations</a>
+      <div class="relative">
+        <button id="mobile-services-btn" class="w-full text-left px-4 py-2 hover:bg-purple-100">Services ▾</button>
+        <ul id="mobile-services-dropdown" class="hidden flex-col mt-1 ml-4 pl-4 space-y-1 border-l border-purple-200">
+          <li><a href="admissionprocessing.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Admission Processing</a></li>
+          <li><a href="visaguide.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Visa Guiding</a></li>
+          <li><a href="counselling.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Counselling</a></li>
+        </ul>
+      </div>
+      <div class="relative">
+        <button id="mobile-about-btn" class="w-full text-left px-4 py-2 hover:bg-purple-100">About ▾</button>
+        <ul id="mobile-about-dropdown" class="hidden flex-col mt-1 ml-4 pl-4 space-y-1 border-l border-purple-200">
+          <li><a href="ceo.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Our CEO</a></li>
+          <li><a href="ernpakistan.html" class="block px-4 py-2 hover:bg-purple-50 rounded">ERN Pakistan</a></li>
+          <li><a href="erndubai.html" class="block px-4 py-2 hover:bg-purple-50 rounded">ERN Dubai</a></li>
+          <li><a href="ernbahrain.html" class="block px-4 py-2 hover:bg-purple-50 rounded">ERN Bahrain</a></li>
+          <li><a href="universities.html" class="block px-4 py-2 hover:bg-purple-50 rounded">Universities</a></li>
+        </ul>
+      </div>
+      <a href="#blogs" class="hover:bg-purple-100 px-4 py-2 rounded">Blogs</a>
+      <a href="contact.html" class="hover:bg-purple-100 px-4 py-2 rounded">Contact</a>
+      <a href="consultation.html" class="bg-purple-100 text-purple-700 px-4 py-2 rounded font-semibold">Free Consultation</a>
+    </nav>
+  </div>
+
+  <script>
+    // Desktop dropdown toggles
+    const servicesWrapper = document.getElementById("servicesDropdownWrapper");
+    const servicesDropdown = document.getElementById("servicesDropdown");
+    servicesWrapper.addEventListener("mouseenter", () => {
+      servicesDropdown.classList.remove("hidden");
+    });
+    servicesWrapper.addEventListener("mouseleave", () => {
+      servicesDropdown.classList.add("hidden");
+    });
+
+    const aboutWrapper = document.getElementById("aboutDropdownWrapper");
+    const aboutDropdown = document.getElementById("aboutDropdown");
+    const ernTeamWrapper = document.getElementById("ernTeamWrapper");
+    const ernTeamDropdown = document.getElementById("ernTeamDropdown");
+    aboutWrapper.addEventListener("mouseenter", () => {
+      aboutDropdown.classList.remove("hidden");
+    });
+    aboutWrapper.addEventListener("mouseleave", () => {
+      aboutDropdown.classList.add("hidden");
+    });
+    ernTeamWrapper.addEventListener("mouseenter", () => {
+      ernTeamDropdown.classList.remove("hidden");
+    });
+    ernTeamWrapper.addEventListener("mouseleave", () => {
+      ernTeamDropdown.classList.add("hidden");
+    });
+
+    // Mobile menu versatility
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileServicesBtn = document.getElementById('mobile-services-btn');
+    const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+    const mobileAboutBtn = document.getElementById('mobile-about-btn');
+    const mobileAboutDropdown = document.getElementById('mobile-about-dropdown');
+
+    toggleButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      toggleButton.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+    });
+
+    mobileServicesBtn.addEventListener('click', () => {
+      mobileServicesDropdown.classList.toggle('hidden');
+    });
+
+    mobileAboutBtn.addEventListener('click', () => {
+      mobileAboutDropdown.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
