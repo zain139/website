@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ERN Pakistan | ERN Global</title>
+  <title>Our CEO | ERN Global</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800 overflow-y-auto">
-  <!-- [Same Header and Mobile Menu as in ceo.html] -->
   <header class="fixed top-0 w-full bg-white shadow-lg z-50">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
       <div class="flex items-center">
         <div class="text-2xl font-bold text-purple-700">ERN Global</div>
       </div>
+
+      <!-- Navigation -->
       <nav class="hidden md:flex space-x-6 items-center">
         <a href="index.html" class="hover:bg-purple-800 px-3 py-2 rounded-md">Home</a>
         <a href="#destinations" class="hover:bg-purple-800 px-3 py-2 rounded-md">Destinations</a>
+
+        <!-- Services Dropdown -->
         <div class="relative" id="servicesDropdownWrapper">
           <button id="servicesButton" class="hover:bg-purple-800 px-3 py-2 rounded-md">Services</button>
           <div id="servicesDropdown" class="absolute hidden flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[200px] z-100">
@@ -26,7 +29,10 @@
             </ul>
           </div>
         </div>
+
         <a href="#blogs" class="hover:bg-purple-800 px-3 py-2 rounded-md">Blogs</a>
+
+        <!-- About Dropdown -->
         <div class="relative" id="aboutDropdownWrapper">
           <button id="aboutButton" class="hover:bg-purple-800 px-3 py-2 rounded-md text-gray-800">About</button>
           <div id="aboutDropdown" class="absolute hidden flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[180px] z-50">
@@ -44,43 +50,45 @@
             <a href="universities.html" class="px-4 py-2 hover:bg-gray-100">Universities</a>
           </div>
         </div>
+
         <a href="contact.html" class="hover:bg-purple-800 px-3 py-2 rounded-md">Contact</a>
         <a href="consultation.html" class="bg-white text-purple-700 hover:bg-purple-100 px-4 py-2 rounded font-semibold">Free Consultation</a>
       </nav>
+
       <button class="md:hidden text-purple-700 text-2xl" id="menu-toggle">☰</button>
     </div>
   </header>
 
   <!-- Main content -->
   <main class="pt-16 overflow-y-auto">
-    <section class="bg-cover bg-center h-64 text-white flex items-center justify-center" style="background-image: url('ernpakistanbg.png');">
+    <section class="bg-cover bg-center h-64 text-white flex items-center justify-center" style="background-image: url('ceobg.png');">
       <div class="text-center">
-        <h1 class="text-4xl font-bold">ERN Pakistan</h1>
-        <p class="text-lg">Your trusted partner in Pakistan for global education</p>
+        <h1 class="text-4xl font-bold">Our CEO</h1>
+        <p class="text-lg">Meet the visionary leader of ERN Global</p>
       </div>
     </section>
 
     <section class="max-w-5xl mx-auto p-6">
-      <h2 class="text-2xl font-bold mb-4">About ERN Pakistan</h2>
-      <p class="mb-6">ERN Pakistan is dedicated to helping students in Pakistan achieve their dreams of studying abroad. Our local experts provide personalized support for every step of your journey.</p>
+      <h2 class="text-2xl font-bold mb-4">About Our CEO</h2>
+      <p class="mb-6">Our CEO is a dedicated leader with years of experience in guiding students toward global opportunities. With a passion for education and international mobility, they have built ERN Global into a trusted name for students worldwide.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-gray-100 p-4 rounded-lg shadow">
-          <img src="pakistan-team.jpg" alt="Pakistan Team" class="w-full max-w-full h-auto rounded mb-3" />
-          <h3 class="text-lg font-semibold">Our Team</h3>
-          <p>Meet the experienced professionals guiding students in Pakistan.</p>
+          <img src="ceo-image.jpg" alt="CEO Portrait" class="w-full max-w-full h-auto rounded mb-3" />
+          <h3 class="text-lg font-semibold">Leadership Journey</h3>
+          <p>Learn about the milestones that shaped our CEO's career in education consulting.</p>
         </div>
         <div class="bg-gray-100 p-4 rounded-lg shadow">
-          <img src="pakistan-services.jpg" alt="Services" class="w-full max-w-full h-auto rounded mb-3" />
-          <h3 class="text-lg font-semibold">Our Services</h3>
-          <p>From visa guidance to admission processing, we offer comprehensive support.</p>
+          <img src="ceo-vision.jpg" alt="Vision" class="w-full max-w-full h-auto rounded mb-3" />
+          <h3 class="text-lg font-semibold">Vision for ERN Global</h3>
+          <p>Discover the mission driving ERN Global to empower students globally.</p>
         </div>
       </div>
     </section>
 
     <section class="bg-purple-700 text-white text-center p-8">
-      <h2 class="text-2xl font-bold mb-2">Ready to Start?</h2>
-      <p class="mb-4">Contact ERN Pakistan for personalized guidance.</p>
+      <h2 class="text-2xl font-bold mb-2">Want to Connect?</h2>
+      <p class="mb-4">Reach out to learn more about our vision and services.</p>
       <a href="contact.html" class="bg-white text-purple-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">Book a Free Consultation</a>
     </section>
   </main>
@@ -121,7 +129,7 @@
     servicesWrapper.addEventListener("mouseenter", () => {
       servicesDropdown.classList.remove("hidden");
     });
-    servicesWrapper.addEventListener("leave", () => {
+    servicesWrapper.addEventListener("mouseleave", () => {
       servicesDropdown.classList.add("hidden");
     });
 
